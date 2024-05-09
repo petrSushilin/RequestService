@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "app.pagination.defaultPageSize",
+      "type": "java.lang.String",
+      "description": "Description for app.pagination.defaultPageSize."
+  }
+] }
