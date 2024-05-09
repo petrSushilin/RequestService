@@ -2,7 +2,6 @@ package ru.petrsushilin.testapp.requestservice.requests;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Range;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -18,7 +17,8 @@ import java.util.Optional;
  */
 @Repository
 public interface RequestRepository extends JpaRepository<Request, Long> {
-    @Query("SELECT r FROM Request r JOIN FETCH r.user u WHERE u.id = :userID")
+    @Query(value = "SELECT r FROM Request r JOIN FETCH r.user u WHERE u.id = :userID",
+            countQuery = "SELECT count(r) FROM Request r WHERE r.user.id = :userID")
     Page<Request> findRequestsByUserID(@Param("userID") Long userID, Pageable pageable);
 
     Page<Request> findRequestsByStage(Stage stage, Pageable pageable);

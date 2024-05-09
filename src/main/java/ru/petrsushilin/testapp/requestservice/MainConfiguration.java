@@ -2,8 +2,6 @@ package ru.petrsushilin.testapp.requestservice;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import ru.petrsushilin.testapp.requestservice.requests.RequestConfiguration;
-import ru.petrsushilin.testapp.requestservice.users.UserConfiguration;
 
 /**
  * @author Petr Sushilin
@@ -11,8 +9,6 @@ import ru.petrsushilin.testapp.requestservice.users.UserConfiguration;
  * @since 05.05.2024
  */
 @Import({
-        RequestConfiguration.class,
-        UserConfiguration.class,
         HibernateConfig.class
 })
 @Configuration

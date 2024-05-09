@@ -1,8 +1,8 @@
 package ru.petrsushilin.testapp.requestservice.users;
 
-import jakarta.persistence.*;
 import ru.petrsushilin.testapp.requestservice.users.enums.Role;
 
+import javax.persistence.*;
 import java.util.Set;
 
 /**

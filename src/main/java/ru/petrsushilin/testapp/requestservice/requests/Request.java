@@ -1,9 +1,9 @@
 package ru.petrsushilin.testapp.requestservice.requests;
 
-import jakarta.persistence.*;
 import ru.petrsushilin.testapp.requestservice.requests.enums.Stage;
 import ru.petrsushilin.testapp.requestservice.users.User;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**

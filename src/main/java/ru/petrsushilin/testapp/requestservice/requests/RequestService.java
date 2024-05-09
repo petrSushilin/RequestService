@@ -1,5 +1,6 @@
 package ru.petrsushilin.testapp.requestservice.requests;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -27,6 +28,7 @@ import java.util.stream.Collectors;
 public class RequestService {
     private final RequestRepository requestRepository;
 
+    @Autowired
     public RequestService(RequestRepository requestRepository) {
         this.requestRepository = requestRepository;
     }

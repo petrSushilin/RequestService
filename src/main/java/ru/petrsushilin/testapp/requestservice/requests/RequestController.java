@@ -1,5 +1,6 @@
 package ru.petrsushilin.testapp.requestservice.requests;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -39,6 +40,7 @@ import java.util.Optional;
 public class RequestController {
     private final RequestService requestService;
 
+    @Autowired
     public RequestController(RequestService requestService) {
         this.requestService = requestService;
     }
